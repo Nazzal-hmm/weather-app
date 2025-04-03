@@ -1,0 +1,83 @@
+body {
+    background-image: url(../img/full-sky.png);
+    background-size: cover;
+}
+
+#parent-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    border: 0.0625rem solid red; 1px → 0.0625rem
+}
+
+#main-container {
+    background-image: url(../img/background-night.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 140vh; /* Note: vh remains as-is (consider converting to rem) */
+    height: 80vh; /* Note: vh remains as-is */
+    margin-right: 3.75rem; /* 60px → 3.75rem */
+    display: flex;
+    background-color: darkblue;
+    align-items: flex-start;
+    justify-content: flex-end;
+    border-radius: 0.625rem; /* 10px → 0.625rem */
+    position: relative;
+    /* border: 0.0625rem solid red; 1px → 0.0625rem */
+}
+
+#search-box {
+    width: 35%;
+    height: 25%;
+    /* border: 0.0625rem solid red; 1px → 0.0625rem */
+    position: relative;
+}
+
+#search-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    justify-content: flex-end;
+    /* border: 0.0625rem solid red; 1px → 0.0625rem */
+    padding-right: 13%;
+    padding-top: 1%;
+}
+
+.searchForm {
+    /* border: 0.0625rem solid red; 1px → 0.0625rem */
+    position: relative;
+}
+
+#searchBar {
+    width: 90%;
+    height: 100%;
+    border-radius: 0.625rem; /* 10px → 0.625rem */
+    z-index: 1;
+    background-color: #273161;
+    font-size: 0.8125rem; /* 13px → 0.8125rem */
+    font-weight: 350;
+    color: white;
+}
+
+::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+#searchButton {
+    position: absolute;
+    right: 0;
+    height: 110%;
+    margin-right: 7%;
+    margin-top: 0.0625rem; /* 1px → 0.0625rem */
+    font-weight: 575;
+    width: 22%;
+    z-index: 2;
+    background-color: #e0e3ff;
+    color: #2e316a;
+    border-radius: 0.625rem; /* 10px → 0.625rem */
+}
