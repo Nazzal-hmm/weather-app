@@ -4,20 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/styles.css">
 </head>
+    
 <body>
     
     
     
     <div id="parent-container">
         <div id="main-container">
+
             <div id="search-container">
                 <div id="search-box">
-                    <input class="search-form" type="text"id="searchBar" placeholder="Enter city name">
+                    <input style='color:white; font-family:"Poppins"; font-size:1rem'class="search-form" type="text"id="searchBar" placeholder="Enter city name">
                     <input class="search-form" type="submit" id="searchButton" placeholder="Search" value="Search">
+
                 </div>
             </div>
+
+
+            <!-- Bottom Container  -->
+
+            <div id="info-container">
+                <div id="city-date-container">
+                    <h1 id="city-name"class="test1">Dubai</h1>
+                    <h3 id="date-hour">Thursday, 9 April 2025 | 07 : 32 PM</h3>
+                </div>
+
+                <div id="temperature-container">
+                    <h1 id="temperature-number">24</h1>
+                    <div id="unit-toggle">
+                        <div id="unit-links">
+                            <a id="celsius-link" class="temp">°C |</a>
+                            <a id="fahrenheit-link" class="temp">F</a>
+                        </div>
+                        <p id="weather-description">Clear Sky</p>
+                    </div>
+                    
+                </div>
+
+                <div id="picture-container">
+                    <img src="./icons/01n.svg">
+
+                    <div id="calc-containers">
+                        <!-- <div class="row"><img class="calc-img "src="./icons/feels-like.svg"> Feels like:24°C</div>
+                        <div  class="row"><img class="calc-img "src="./icons/humidity.svg"> Humidity:63%</div>
+                        <div  class="row"><img class="calc-img " src="./icons/wind.svg"> Wind:1km/h</div> -->
+                        <ul>
+                            <li style='list-style-image:url("./icons/feels-like.svg");''>
+                                Feels like:
+                                <span id="feels-like">24</span>
+                                <span>°C</span>
+                            </li>
+                            <li style='list-style-image:url("./icons/humidity.svg");'>
+                                
+                                Humidity: 
+                                <span id="humidity-level">63</span>
+                                %
+                            </li>
+                            <li style='list-style-image:url("./icons/wind.svg");'>
+                                Wind: 
+                                <span id="wind-speed">1</span>
+                                km/h
+
+
+                            </li>
+                        </ul>
+                        
+                </div>
+                
+            </div>
+           
         </div>
     </div>
     
@@ -27,3 +88,4 @@
     <script src="app.js"></script>
 </body>
 </html>
+

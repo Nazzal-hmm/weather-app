@@ -1,55 +1,68 @@
 body {
     background-image: url(../img/full-sky.png);
     background-size: cover;
+    min-height:100vh;
+    font-family: "Poppins";
 }
 
 #parent-container {
+    min-height:100vh;
     display: flex;
     height: 100vh;
     width: 100%;
     align-items: center;
-    flex-direction: row;
     justify-content: center;
-    border: 0.0625rem solid red; 1px → 0.0625rem
+    /* border: 0.0625rem solid red;  */
 }
 
 #main-container {
     background-image: url(../img/background-night.png);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 140vh; /* Note: vh remains as-is (consider converting to rem) */
+    width: 100%; /* Note: vh remains as-is (consider converting to rem) */
+    max-width:1380px;
     height: 80vh; /* Note: vh remains as-is */
-    margin-right: 3.75rem; /* 60px → 3.75rem */
+    max-height:700px;
+    margin-right: 0; /* 60px → 3.75rem */
     display: flex;
     background-color: darkblue;
     align-items: flex-start;
     justify-content: flex-end;
     border-radius: 0.625rem; /* 10px → 0.625rem */
     position: relative;
-    /* border: 0.0625rem solid red; 1px → 0.0625rem */
+    flex-direction: column;
+    border: 0.0625rem solid red; 1px → 0.0625rem
 }
 
 #search-box {
-    width: 35%;
-    height: 25%;
-    /* border: 0.0625rem solid red; 1px → 0.0625rem */
+    width: 100%;
+    max-width:400px;
+    height: 3rem;
+    /* border: 0.0625rem solid red;  */
     position: relative;
 }
 
 #search-container {
     display: flex;
     align-items: center;
-    width: 100%;
+    width: 87%;
     height: 20%;
-    justify-content: flex-end;
-    /* border: 0.0625rem solid red; 1px → 0.0625rem */
+    justify-content:flex-end;
+     /* border: 0.0625rem solid red;  */
     padding-right: 13%;
     padding-top: 1%;
 }
 
-.searchForm {
-    /* border: 0.0625rem solid red; 1px → 0.0625rem */
+
+
+.search-form {
+    /* border: 0.0625rem solid red;  */
     position: relative;
+
+}
+
+.searchForm:active{  
+    border:0;
 }
 
 #searchBar {
@@ -60,11 +73,16 @@ body {
     background-color: #273161;
     font-size: 0.8125rem; /* 13px → 0.8125rem */
     font-weight: 350;
-    color: white;
+    /* color: white; */
+    /* border: 0.0625rem solid red;  */
+}
+
+#searchBar:focus{
+    outline:0;
 }
 
 ::placeholder {
-    color: white;
+    /* color: white; */
     opacity: 1;
 }
 
@@ -80,4 +98,174 @@ body {
     background-color: #e0e3ff;
     color: #2e316a;
     border-radius: 0.625rem; /* 10px → 0.625rem */
+    /* border:1px solid red; */
 }
+
+
+/* Info Container (Bottom Container*/
+
+
+#info-container {
+    flex:1;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 1%;
+    color: white; /* Optional: if you're missing visibility due to background */
+    /* border:1px solid red; */
+    position:relative;
+
+}
+
+
+
+#city-date-container{
+    margin-top:4rem;
+    margin-left:4em;
+    font-weight:none;
+    /* border:1px solid red; */
+    
+}
+
+
+
+#city-name{
+    font-size:4.5rem;
+    /* border:1px solid white; */
+    margin:0;
+    font-weight:500;
+    
+}
+
+#date-hour{
+    font-weight:400;
+    font-size:14px;
+    /* border:1px solid white; */
+    margin:0;
+}
+
+#temperature-container{
+    display:flex;
+    width:30rem;
+    height:10rem;
+    justify-content: flex-start;
+    align-items: center;
+    text-align:center;
+    margin-left:4.7rem;
+    margin-top:2rem;
+    font-weight:400;
+    /* border:1px solid red; */
+}
+
+#temperature-number{
+    font-size:8rem;
+    font-weight:400;
+
+}
+
+#unit-toggle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 3rem; /* pushes °C | F to the right */
+    font-size: 3rem;
+}
+
+#celsius-link,#fahrenheit-link{
+    font-size:1.5rem;
+    font-weight:300;
+    display:inline;
+    margin: 0 0.2rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    opacity:0.6;
+
+}
+
+#unit-links{
+    gap:0;
+}
+
+
+
+#weather-description{
+    margin-top: 0.4rem;
+    font-size: 1.7rem;
+    color: white;
+
+}
+
+
+#picture-container{
+    position:absolute;
+    transform:translateY(-50%);
+    top:41%;
+    right:0%;
+    /* border:1px solid red; */
+    width:38.5%;
+    display:flex;
+    justify-content:flex-start;
+
+
+
+}
+
+img[src="./icons/01n.svg"]{
+    margin:0;
+    height:15rem;
+    width:15rem;
+}
+
+#calc-containers{
+    /* display:flex;
+    flex-direction:column;
+    align-items:center;
+    border:1px solid red; 
+    right:0%;
+    position:absolute;
+    width:45%;
+    align-items: flex-start;
+    top:40%;
+    gap:0.5rem; */
+    list-style-type:none;
+    /* border:1px solid red; */
+    top:25%;
+    position: absolute;
+    right:0;
+    right:15%;
+    
+    
+
+}
+
+ul{
+    list-style-type:none;
+    opacity:0.8;
+    /* border:1px solid red; */
+    font-size:1.2rem;
+    font-weight:300;
+    text-align:
+
+
+}
+
+.row{
+    display:inline;
+    font-size:1rem;
+    text-align:center;
+    /* border:1px solid red; */
+
+}
+
+.calc-img{
+    
+    height:2rem;
+    width:2rem;
+    /* border:1px solid red; */
+}
+
+
+
+
