@@ -20,9 +20,10 @@
 
             <div id="search-container">
                 <div id="search-box">
+                    <form style='display:inline;'class="searchForm">
                     <input style='color:white; font-family:"Poppins"; font-size:1rem'class="search-form" type="text"id="searchBar" placeholder="Enter city name">
                     <input class="search-form" type="submit" id="searchButton" placeholder="Search" value="Search">
-
+                    </form>
                 </div>
             </div>
 
@@ -39,7 +40,8 @@
                     <h1 id="temperature-number">24</h1>
                     <div id="unit-toggle">
                         <div id="unit-links">
-                            <a id="celsius-link" class="temp">°C |</a>
+                            <a id="celsius-link" class="temp">°C</a>
+                            <span class="temp">|</span>
                             <a id="fahrenheit-link" class="temp">F</a>
                         </div>
                         <p id="weather-description">Clear Sky</p>
@@ -48,7 +50,7 @@
                 </div>
 
                 <div id="picture-container">
-                    <img src="./icons/01n.svg">
+                    <img src="./icons/01n.svg" id="icon-element">
 
                     <div id="calc-containers">
                         <!-- <div class="row"><img class="calc-img "src="./icons/feels-like.svg"> Feels like:24°C</div>

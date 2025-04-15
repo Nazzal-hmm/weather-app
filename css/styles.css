@@ -16,7 +16,7 @@ body {
 }
 
 #main-container {
-    background-image: url(../img/background-night.png);
+    /* background-image: url(../img/background-night.png); */
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%; /* Note: vh remains as-is (consider converting to rem) */
@@ -61,9 +61,11 @@ body {
 
 }
 
-.searchForm:active{  
-    border:0;
+#searchButton:hover{
+    cursor: pointer;
 }
+
+
 
 #searchBar {
     width: 90%;
@@ -172,7 +174,7 @@ body {
     font-size: 3rem;
 }
 
-#celsius-link,#fahrenheit-link{
+.temp{
     font-size:1.5rem;
     font-weight:300;
     display:inline;
@@ -183,6 +185,18 @@ body {
     opacity:0.6;
 
 }
+#celsius-link:hover, #fahrenheit-link:hover {
+    opacity: 1;
+    color: #e0e3ff; /* Or any color you'd like to change to on hover */
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
+}
+
+#celsius-link:active, #fahrenheit-link:active {
+    opacity:200%;
+    color: #ffffff; /* Keep the white color */
+    text-shadow: 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff; /* More intense glowing effect */
+}
+
 
 #unit-links{
     gap:0;
@@ -212,11 +226,14 @@ body {
 
 }
 
-img[src="./icons/01n.svg"]{
+#icon-element{
     margin:0;
     height:15rem;
     width:15rem;
 }
+
+
+
 
 #calc-containers{
     /* display:flex;
@@ -264,6 +281,24 @@ ul{
     height:2rem;
     width:2rem;
     /* border:1px solid red; */
+}
+
+
+.nightMode{
+    background-image:url("../img/background-night.png") !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+
+.dayMode{
+    background-image:url("../img/background-day.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
 }
 
 
